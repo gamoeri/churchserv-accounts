@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from accounts.views import hello, index, current_datetime, home
 from auth.views import log_in, register, log_out
+from snippets.views import snippets
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
@@ -13,7 +14,7 @@ urlpatterns = patterns('',
   url(r'^register/$', register),
   url(r'^home/$', home),
   url(r'^logout/$', log_out),
-  url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
+  url(r'^snippets/$', snippets),
     # Examples:
     # url(r'^$', 'accounts.views.home', name='home'),
     # url(r'^accounts/', include('accounts.foo.urls')),

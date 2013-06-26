@@ -52,6 +52,4 @@ def log_in(request):
 
 def log_out(request):
     logout(request)
-    request.session.flush()
-    request.user = None
     return redirect('/')

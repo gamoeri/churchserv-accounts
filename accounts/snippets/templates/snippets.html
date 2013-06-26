@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+
+{% block title %}Snippets {% endblock %}
+
+{% block content %}	
+	{% for snippet in allsnippets %}
+	    <h2>{{ snippet.name }}</h2>
+	    <p>{{ snippet.description}}</p>
+		</br></br>
+	{% endfor %}
+	<br><br>
+	<a href='/home'>home</a>
+	</br>
+	<a href='/'>index</a>
+{% endblock %} 	
+
